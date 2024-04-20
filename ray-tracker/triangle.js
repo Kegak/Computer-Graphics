@@ -38,30 +38,30 @@ class Triangle{
      * Get the vector from one to two
      */
     get oneTwo(){
-        this.one.position.minus(this.two.position).normalize();
+        return this.one.position.minus(this.two.position).normalize();
     }
 
     get twoThree(){
-        this.two.position.minus(this.three.position).normalize()
+        return this.two.position.minus(this.three.position).normalize()
     }
 
     get threeOne(){
-        this.three.position.minus(this.one.position).normalize()
+        return this.three.position.minus(this.one.position).normalize()
     }
 
     /**
      * Get the vector from three to two
      */
     get threeTwo(){
-        this.three.position.minus(this.two.position).normalize();
+        return this.three.position.minus(this.two.position).normalize();
     }
 
     get twoOne(){
-        this.two.position.minus(this.one.position).normalize();
+        return this.two.position.minus(this.one.position).normalize();
     }
 
     get oneThree(){
-        this.one.position.minus(this.three.position).normalize();
+        return this.one.position.minus(this.three.position).normalize();
     }
 
     /**
