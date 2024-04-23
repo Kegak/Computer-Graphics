@@ -79,4 +79,4 @@ function closestCollision(origin, direction, ignored = null, remaining = 1){
 }
 
 //Run the main ray tracer
-main()
+main();

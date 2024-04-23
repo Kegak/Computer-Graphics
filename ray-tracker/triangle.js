@@ -104,9 +104,9 @@ class Triangle{
         let j = b.dot(ABC)
         let k = c.dot(ABC)
 
-        if(i < 0) return
-        if(j < 0) return
-        if(k < 0) return
+        if(i < 0) return;
+        if(j < 0) return;
+        if(k < 0) return;
         
         //Return all the details about the collision
         return new Collision(timeToCollision, collisionLocation, ABC);

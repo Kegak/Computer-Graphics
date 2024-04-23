@@ -38,14 +38,14 @@ class Plane{
      * Get the vector from one to two
      */
     get oneTwo(){
-        this.one.position.minus(this.two.position).normalize();
+        return this.one.position.minus(this.two.position).normalize();
     }
 
     /**
      * Get the vector from three to two
      */
     get threeTwo(){
-        this.three.position.minus(this.two.position).normalize();
+        return this.three.position.minus(this.two.position).normalize();
     }
 
     /**
