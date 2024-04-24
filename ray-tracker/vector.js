@@ -62,7 +62,7 @@ class Vector3 {
      * @returns The dot product of this and the other vector
      */
     dot(other){
-        return this.x * other.x + this.y * other.y + this * other.z
+        return this.x * other.x + this.y * other.y + this.z * other.z
     }
     /**
      * Calculates the cross product of this and the other vector
