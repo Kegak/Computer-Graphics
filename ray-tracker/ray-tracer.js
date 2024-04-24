@@ -14,7 +14,7 @@ async function main(){
     //Ray Tracer starts
     //Loop over all the pixels
     for (let y = 0; y < height; y++){
-        for (let x =0; x< width; x++){
+        for (let x = 0; x < width; x++){
             if(!image[x][y])
                 image[x][y]=[]
             
@@ -32,21 +32,21 @@ function render(x, y){
 
 
     //Determine the origin and direction of the ray
-    let startX = x - width /2
-    let startY = y - height /2
+    let startX = x - width / 2
+    let startY = y - height / 2
     let origin = Scene.scene.camera.getOrigin(startX, startY)
-    let direction = Scene.scene.camera.getDirection(startX / (width /2), startY / (height /2))
+    let direction = Scene.scene.camera.getDirection(startX / (width / 2), startY / (height / 2))
 
     let result = closestCollision(origin, direction, null, 1)
-    if (!result) return {r:128, g:128, b:128}
+    if (!result) return {r:128, g:128, b:128};
     // if (true) return {r:128, g:128, b:128}
 
-    return {r:255, g:255, b:255}
+    return {r:255, g:255, b:255};
 }
 
 function closestCollision(origin, direction, ignored = null, remaining = 1){
     if (remaining <= 0) return;
-    let closestPostiveT = Number.MAX_VALUE
+    let closestPositiveT = Number.MAX_VALUE;
     let closestCollision;
 
     //The color of the closest collision for this pixel
@@ -60,9 +60,9 @@ function closestCollision(origin, direction, ignored = null, remaining = 1){
 
         //Check to see if the collision exists...
         //...and if it is closer than any other collision we've seen
-        if (collision && collision.timeToCollision < closestPostiveT){
+        if (collision && collision.timeToCollision < closestPositiveT){
             //Get the distance to collision
-            closestPostiveT = collision.timeToCollision
+            closestPositiveT = collision.timeToCollision
             collision.rayTracedObject = rayTracedObject;
 
             closestCollision = collision

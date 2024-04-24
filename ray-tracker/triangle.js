@@ -84,7 +84,7 @@ class Triangle{
         let D = -(ABC.dot(this.one.position));
 
         //Calculate the time to collision
-        let timeToCollision = (-D-origin.dot(ABC)/(direction.dot(ABC)))
+        let timeToCollision = (-D-origin.dot(ABC))/(direction.dot(ABC))
         if(timeToCollision <= 0)
             return;
 
