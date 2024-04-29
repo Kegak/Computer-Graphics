@@ -40,8 +40,8 @@ function render(x, y){
     let result = closestCollision(origin, direction, null, 1)
     if (!result) return {r:128, g:128, b:128};
     // if (true) return {r:128, g:128, b:128}
-
-    return {r:255, g:255, b:255};
+    let rayTracePixel = result.rayTracedObject.shader.illuminateObject(origin, result.collisionLocation, result.normalAtCollision, result.rayTracedObject, 0)
+    return rayTracePixel;
 }
 
 function closestCollision(origin, direction, ignored = null, remaining = 1){
@@ -72,7 +72,7 @@ function closestCollision(origin, direction, ignored = null, remaining = 1){
             let normal = collision.normalAtCollision
 
             //Use the shader to calculate the color at this collision
-            // rayTracePixel = collision.rayTracedObject.shader.illuminateObject(origin, c, normal, rayTracedObject, remaining - 1)
+            //rayTracePixel = collision.rayTracedObject.shader.illuminateObject(origin, c, normal, rayTracedObject, remaining - 1)
         }
     }
     return closestCollision;
